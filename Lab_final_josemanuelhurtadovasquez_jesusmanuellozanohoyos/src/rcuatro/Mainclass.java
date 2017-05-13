@@ -3,11 +3,17 @@ import java.util.*;
 
 public class Mainclass {
 	static Scanner sc = new Scanner(System.in);
+	boolean terven = true;
+	int x=0, y=0, z=0;
+	int [][][] DatosVendor = new int[100][100][100];
 	int [][][] DatosVentas = new int[100][100][100];
-	
+	int [][] DatosVentas1 = new int[100][100];
 	public void ventas(){
-		
-		
+		System.out.println("Datos de las Ventas.\n");
+		while(terven){
+			x++;
+			System.out.print("");
+		}
 	}
 	
 	public void registro(){}
