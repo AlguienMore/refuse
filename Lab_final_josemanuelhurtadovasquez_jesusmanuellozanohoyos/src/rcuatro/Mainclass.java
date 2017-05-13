@@ -4,17 +4,23 @@ import java.util.*;
 public class Mainclass {
 	static int menu = 6;
 	static Scanner sc = new Scanner(System.in);
-	boolean terven = true;
-	int x=0, y=0, z=0;
-	int [][][] DatosVendor = new int[100][100][100];
-	int [][][] DatosVentas = new int[100][100][100];
-	int [][] DatosVentas1 = new int[100][100];
+	String terven= null;
+	int i = 0;
+	int v [][] = new int[100][100];
 	public void ventas(){
 		System.out.println("Datos de las Ventas.\n");
-		while(terven){
-			x++;
-			System.out.print("");
-		}
+		do{
+			System.out.print("CODIGO DEL VENDEDOR:\n>");
+			v[i][i]= sc.nextInt();
+			System.out.print("\nCODIGO DEL COMPRADOR:\n>");
+			v[i][i+1]= sc.nextInt();
+			System.out.print("\nCODIGO DEL PRODUCTO:\n>");
+			v[i][i+2]=sc.nextInt();
+			System.out.print("\nPRECIO POR UNIDAD:\n>");
+			v[i][i+3]=sc.nextInt();
+			System.out.print("\nCANTIDAD VENDIDA:\n>");
+			v[i][i+4]=sc.nextInt();
+		}while (terven.equalsIgnoreCase("si"));
 	}
 	
 	public void registro(){
@@ -35,6 +41,7 @@ public class Mainclass {
 	
 	public void ingreso(){
 		System.out.print("ingreso");
+		
 	}
 		
 	public void despido(){
