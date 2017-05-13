@@ -11,20 +11,20 @@ public class Mainclass {
 	int vendor[] = new int[100];
 	int vendordatos[][] = new int [100][100];
 	String[] args = null;
-	public int[][] ventas(){
+	public void ventas(){
 		System.out.println("Datos de las Ventas.\n");
 		do{
 			seg = true;
 			System.out.print("CODIGO DEL VENDEDOR:\n>");
-			v[i][i]= sc.nextInt();
+			this.v[i][i]= sc.nextInt();
 			System.out.print("\nCODIGO DEL COMPRADOR:\n>");
-			v[i][i+1]= sc.nextInt();
+			this.v[i][i+1]= sc.nextInt();
 			System.out.print("\nCODIGO DEL PRODUCTO:\n>");
-			v[i][i+2]=sc.nextInt();
+			this.v[i][i+2]=sc.nextInt();
 			System.out.print("\nPRECIO POR UNIDAD:\n>");
-			v[i][i+3]=sc.nextInt();
+			this.v[i][i+3]=sc.nextInt();
 			System.out.print("\nCANTIDAD VENDIDA:\n>");
-			v[i][i+4]=sc.nextInt();
+			this.v[i][i+4]=sc.nextInt();
 			i++;
 			System.out.print("\n¿DESEA REGISTRAR OTRA VENTA?:\n>");
 			while(seg){
@@ -34,16 +34,15 @@ public class Mainclass {
 			}else if(!terven.equalsIgnoreCase("")) {System.out.println("Por favor, digite una respuesta valida. \n>");}
 			}
 		}while (terven.equalsIgnoreCase("si"));
-		
-		return v;
+		Mainclass.main(args);
 	}
 	
 	public void registro(){
 		System.out.println("Registro de ventas por vendedor.\n");
 		for(i = 0; i < n; i++){
-			sum += v[i][i+4];
+			this.sum += this.v[i][i+4];
 		}
-		System.out.print(sum);
+		System.out.println(this.sum);
 		Mainclass.main(args);
 	}
 	
