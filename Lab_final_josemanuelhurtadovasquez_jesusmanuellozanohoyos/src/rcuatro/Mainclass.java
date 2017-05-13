@@ -2,6 +2,7 @@ package rcuatro;
 import java.util.*;
 
 public class Mainclass {
+	static int menu = 6;
 	static Scanner sc = new Scanner(System.in);
 	boolean terven = true;
 	int x=0, y=0, z=0;
@@ -16,23 +17,36 @@ public class Mainclass {
 		}
 	}
 	
-	public void registro(){}
+	public void registro(){
+		System.out.print("registro");
+	}
 	
-	public void sueldo(){}
+	public void sueldo(){
+		System.out.print("sueldo");
+	}
 	
-	public void visual(){}
+	public void visual(){
+		System.out.print("visualizacion");
+	}
 	
-	public void consultas(){}
+	public void consultas(){
+		System.out.print("consultas");
+	}
 	
-	public void ingreso(){}
+	public void ingreso(){
+		System.out.print("ingreso");
+	}
 		
-	public void despido(){}
+	public void despido(){
+		System.out.print("despido");
+	}
 	
-	public void salir(){}
+	public void salir(){
+		System.out.print("salir");
+	}
 	
 	public static void main(String[] args) {
 		Mainclass sel = new Mainclass();
-		int menu=6;
 		System.out.print("¡Bienvenido, usuario!\n"); System.out.print("Accesories' R4\n");
 		menu = sc.nextInt();
 		switch(menu){
