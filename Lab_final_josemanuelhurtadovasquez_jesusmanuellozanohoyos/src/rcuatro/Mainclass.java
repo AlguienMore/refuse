@@ -2,6 +2,7 @@ package rcuatro;
 import java.io.*;
 import java.util.*;
 import rcuatro.Ventas;
+import rcuatro.Vendor;
 
 public class Mainclass {
 	boolean pvez= true;
@@ -9,16 +10,18 @@ public class Mainclass {
 	static Scanner sc = new Scanner(System.in);
 	String terven= "";
 	boolean seg = true;
-	int i = 0, sum =0; static int n= 0;
+	int i = 0, a=0,sum =0, cod=0; static int n= 0;
 	int v [][] = new int[100][100];
 	int vendor[] = new int[100];
 	int vendordatos[][] = new int [100][100];
 	Mainclass sel;
+	Vendor vnr;
 	static Mainclass sel1;
 	
 	public void menu(){
 		sel = new Mainclass();
 		Ventas ven = new Ventas();
+		vnr = new Vendor();
 		for(int x = 0; x <= 100; x++){
 			System.out.print("-");
 		}do{
@@ -33,7 +36,8 @@ public class Mainclass {
 			n = sc.nextInt();
 			System.out.print("\n¡Excelente!, ahora lo redirijiremos a la sección de Ingreso de Vendedores.");
 			pvez = false;
-			sel.ingreso();
+			vnr.ingreso();
+			
 			
 		}
 		switch(menu){
@@ -54,7 +58,7 @@ public class Mainclass {
 			sel.consultas();
 			break;
 		case 6:
-			sel.ingreso();
+			try{vnr.ingreso();}catch(NullPointerException e){}
 			break;
 		case 7:
 			sel.despido();
@@ -63,43 +67,37 @@ public class Mainclass {
 			sel.salir();
 			break;
 		}
-		}while (menu != 8);
+		}while (menu != 9);
 		
 		
 			
 	}
 	public void sueldo(){
 		System.out.print("sueldo");
-		
+		try{sel.menu();}catch(NullPointerException e){}
 	}
 	
 	public void visual(){
 		System.out.print("visualizacion");
-		
+		try{sel.menu();}catch(NullPointerException e){}
 	}
 	
 	public void consultas(){
 		System.out.print("consultas");
-		
+		try{sel.menu();}catch(NullPointerException e){}
 	}
 	
-	public void ingreso(){
-		System.out.print("ingreso");
-		try{System.in.read();}catch(IOException e){System.out.println("Ay amooooor diviiino, pronto tienes que volveeeee-er a miii");}
-		try{sel.menu();}catch(NullPointerException e){System.out.println("Ay amooooor diviiino, pronto tienes que volveeeee-er a miii");}
-	}
-		
 	public void despido(){
 		System.out.print("despido");
-		sel.menu();
-	}
+		try{sel.menu();}catch(NullPointerException e){}
+		}
 	
 	public void salir(){
 		System.out.print("\n¡Que tenga un buen día!\nHasta luego\nPresione cualquier tecla para iniciar...");
 		try{
 			System.in.read();
 		}catch(IOException e){}
-		sel.menu();
+		try{sel.menu();}catch(NullPointerException e){}
 	}
 	
 	public static void main(String[] args) {
