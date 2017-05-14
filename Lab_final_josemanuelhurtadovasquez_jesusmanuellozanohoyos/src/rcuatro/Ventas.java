@@ -28,16 +28,16 @@ public class Ventas extends Mainclass{
 		
 	}
 	
-	public void dos(int n, int lel){
+	public void dos(){
 		System.out.println("Registro de ventas por vendedor.\n");
 		for(i = 0; i < n; i++){
-			this.sum += lel;
+			this.sum += v[i][i+4];
 			
 			System.out.println(i);
 			System.out.println(n);
 		}
 		System.out.println(this.v[0][4]);
 		System.out.println(sum);
-		Mainclass.main(args);
+		try{sel.menu();}catch(NullPointerException e){}
 	}
 }
