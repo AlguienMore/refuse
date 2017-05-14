@@ -1,5 +1,6 @@
 package rcuatro;
 import java.util.*;
+import rcuatro.Ventas;
 
 public class Mainclass {
 	static int menu = 6;
@@ -11,32 +12,7 @@ public class Mainclass {
 	int vendor[] = new int[100];
 	int vendordatos[][] = new int [100][100];
 	String[] args = null;
-	public void ventas(){
-		System.out.println("Datos de las Ventas.\n");
-		do{
-			seg = true;
-			System.out.print("CODIGO DEL VENDEDOR:\n>");
-			this.v[i][i]= sc.nextInt();
-			System.out.print("\nCODIGO DEL COMPRADOR:\n>");
-			this.v[i][i+1]= sc.nextInt();
-			System.out.print("\nCODIGO DEL PRODUCTO:\n>");
-			this.v[i][i+2]=sc.nextInt();
-			System.out.print("\nPRECIO POR UNIDAD:\n>");
-			this.v[i][i+3]=sc.nextInt();
-			System.out.print("\nCANTIDAD VENDIDA:\n>");
-			this.v[i][i+4]=sc.nextInt();
-			i++;
-			System.out.print("\n¿DESEA REGISTRAR OTRA VENTA?:\n>");
-			while(seg){
-			terven = sc.nextLine();
-			if (terven.equalsIgnoreCase("si")||terven.equalsIgnoreCase("no")){
-				seg = false;
-			}else if(!terven.equalsIgnoreCase("")) {System.out.println("Por favor, digite una respuesta valida. \n>");}
-			}
-		}while (terven.equalsIgnoreCase("si"));
-		Mainclass.main(args);
-	}
-	
+		
 	public void registro(){
 		System.out.println("Registro de ventas por vendedor.\n");
 		for(i = 0; i < n; i++){
@@ -78,11 +54,15 @@ public class Mainclass {
 	
 	public static void main(String[] args) {
 		Mainclass sel = new Mainclass();
+		Ventas ven = new Ventas();
 		System.out.print("¡Bienvenido, usuario!\n"); System.out.print("Accesories' R4\n");
 		menu = sc.nextInt();
 		switch(menu){
 		case 1:
-			sel.ventas();
+			int lel;
+			lel = sc.nextInt();
+			ven.entas(lel);
+			Mainclass.main(args);
 			break;
 		case 2:
 			sel.registro();
