@@ -5,6 +5,7 @@ public class Vendor extends Mainclass {
 	int w;
 	public void ingreso(){
 		System.out.print("");
+		if(pvez== true){
 		for(w = 0; w < n; w++){
 			
 			System.out.print("\nIngrese el código del vendedor n°"+(w+1)+":\n>");
@@ -20,8 +21,14 @@ public class Vendor extends Mainclass {
 			}
 			
 			
+		} 
+
+		}else if (pvez==false){
+			w=n;
+			n=n+1;
+			System.out.print("\nIngrese el código del nuevo vendedor (n°"+(w+1)+"):\n>");
+			cod = sc.nextInt();
 		}
-		
-	}
+		}
 	
 }
