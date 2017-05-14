@@ -28,7 +28,7 @@ public class Mainclass {
 		System.out.print("\n¡Bienvenido, usuario!\n"); System.out.print("Accesories' R4\n");
 		if (pvez == false){
 		System.out.print("\nElija un opción:\n1)Registrar nueva venta.\n2)Registro de cada vendedor.\n3)Visualización de pago de sueldo.\n4)Visualización de trabajadores destacados del día y los menos productivos.\n");
-		System.out.print("5)Ingreso de nuevo vendedor.\n6)Despido de un vendedor existente.\n>");
+		System.out.print("5)Consulta por código de vendedor.\n6)Ingreso de nuevo vendedor.\n7)Despido de un vendedor existente.\n 8)Salir del programa.\n>");
 		menu = sc.nextInt();
 		} else {
 			System.out.print("\nHemos detectado que es la primera vez que corre este programa\nPor tanto, necesitamos de una configuraciones iniciales\n");
@@ -58,7 +58,7 @@ public class Mainclass {
 			sel.consultas();
 			break;
 		case 6:
-			try{vnr.ingreso();}catch(NullPointerException e){}
+			vnr.ingreso();
 			break;
 		case 7:
 			sel.despido();
