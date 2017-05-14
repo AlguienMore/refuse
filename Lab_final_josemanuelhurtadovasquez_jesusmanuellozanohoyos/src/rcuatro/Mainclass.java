@@ -7,21 +7,12 @@ public class Mainclass {
 	static Scanner sc = new Scanner(System.in);
 	String terven= "";
 	boolean seg = true;
-	int i = 0, sum =0, n= 0;
+	int i = 0, sum =0, n= 6;
 	int v [][] = new int[100][100];
 	int vendor[] = new int[100];
 	int vendordatos[][] = new int [100][100];
 	String[] args = null;
 		
-	public void registro(){
-		System.out.println("Registro de ventas por vendedor.\n");
-		for(i = 0; i < n; i++){
-			this.sum += this.v[i][i+4];
-		}
-		System.out.println(this.sum);
-		Mainclass.main(args);
-	}
-	
 	public void sueldo(){
 		System.out.print("sueldo");
 		Mainclass.main(args);
@@ -55,17 +46,19 @@ public class Mainclass {
 	public static void main(String[] args) {
 		Mainclass sel = new Mainclass();
 		Ventas ven = new Ventas();
-		System.out.print("¡Bienvenido, usuario!\n"); System.out.print("Accesories' R4\n");
+		for(int e = 0; e <= 50; e++){
+			System.out.print("-");
+		}
+		System.out.print("\n¡Bienvenido, usuario!\n"); System.out.print("Accesories' R4\n");
 		menu = sc.nextInt();
 		switch(menu){
 		case 1:
-			int lel;
-			lel = sc.nextInt();
-			ven.entas(lel);
+			ven.uno();
+			System.out.println("");
 			Mainclass.main(args);
 			break;
 		case 2:
-			sel.registro();
+			ven.dos(5, 2);
 			break;
 		case 3:
 			sel.sueldo();
